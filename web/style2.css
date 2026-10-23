@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f0fa;
+    color: #352447;
+    min-height: 100vh;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca-icone {
+    font-size: 38px;
+}
+
+.marca h1 {
+    color: #8052b8;
+    font-size: 26px;
+}
+
+.marca p {
+    margin-top: 5px;
+    color: #897b9a;
+    font-size: 14px;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 17px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #8052b8;
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #633b96;
+}
+
+.btn-sair {
+    background: #e8def3;
+    color: #5e4478;
+}
+
+.btn-sair:hover {
+    background: #d9c9eb;
+}
+
+.boas-vindas {
+    background: linear-gradient(120deg, #55317f, #a477d1);
+    padding: 30px;
+    border-radius: 22px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.boas-vindas h2 {
+    margin-bottom: 10px;
+    font-size: 27px;
+}
+
+.boas-vindas p {
+    line-height: 1.6;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.cartao {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #49306412;
+    border: 1px solid #e7dcf1;
+}
+
+.cartao span {
+    font-size: 27px;
+}
+
+.cartao p {
+    color: #897b9a;
+    margin-top: 12px;
+}
+
+.cartao h3 {
+    margin-top: 8px;
+    font-size: 25px;
+    color: #63418a;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.painel {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #49306412;
+    border: 1px solid #e7dcf1;
+    min-width: 0;
+}
+
+.painel h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #63418a;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #5e4478;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6c5e7;
+    border-radius: 10px;
+    background: #fdfbff;
+    color: #352447;
+    font-size: 14px;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: 2px solid #d0b5ed;
+    border-color: #8052b8;
+}
+
+.painel form > .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.mensagem {
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.btn-atualizar {
+    width: 100%;
+    margin-bottom: 18px;
+    background: #9465c5;
+}
+
+.btn-atualizar:hover {
+    background: #7548a6;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.evento {
+    padding: 17px;
+    background: #f8f3fc;
+    border: 1px solid #e5d8f1;
+    border-radius: 14px;
+    overflow-wrap: anywhere;
+}
+
+.evento h3 {
+    margin-bottom: 8px;
+    color: #8052b8;
+    font-size: 17px;
+}
+
+.evento p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #6e5b80;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.acoes button {
+    border: none;
+    border-radius: 9px;
+    padding: 9px 12px;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.acoes button:hover {
+    filter: brightness(0.95);
+}
+
+.editar {
+    background: #e8dcf7;
+    color: #633b96;
+}
+
+.excluir {
+    background: #fbe4e8;
+    color: #b83252;
+}
+
+.vazio {
+    color: #897b9a;
+    text-align: center;
+    padding: 25px 5px;
+    line-height: 1.6;
+}
+
+.rodape {
+    text-align: center;
+    color: #897b9a;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 750px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        align-items: flex-start;
+    }
+
+    .marca h1 {
+        font-size: 21px;
+    }
+
+    .topo .btn {
+        padding: 10px;
+    }
+
+    .boas-vindas h2 {
+        font-size: 23px;
+    }
+
+    .painel {
+        padding: 20px;
+    }
+}

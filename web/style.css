@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f0fa, #e8def3);
+    color: #352447;
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e7dcf1;
+    box-shadow: 0 8px 30px #49306412;
+}
+
+.icone {
+    font-size: 45px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #8052b8;
+    margin: 15px 0 10px;
+}
+
+.login p {
+    text-align: center;
+    color: #897b9a;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 7px;
+    color: #5e4478;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6c5e7;
+    border-radius: 10px;
+    outline: none;
+    background: #fdfbff;
+    color: #352447;
+    font-size: 14px;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+input::placeholder {
+    color: #a394b3;
+}
+
+input:focus {
+    border-color: #8052b8;
+    box-shadow: 0 0 0 3px #8052b81a;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(120deg, #55317f, #9465c5);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease,
+                transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(120deg, #432563, #7548a6);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .login {
+        padding: 28px 22px;
+    }
+}

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Events | Início</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js" defer></script>
+</head>
+<body>
+    <main class="pagina">
+        <header class="topo">
+            <div class="marca">
+                <div class="marca-icone">🌦️</div>
+                <div>
+                    <h1>Weather-Events</h1>
+                    <p>Monitoramento de eventos climáticos</p>
+                </div>
+            </div>
+            <button class="btn btn-sair" id="btnSair">Sair da conta</button>
+        </header>
+
+        <section class="boas-vindas">
+            <h2 id="boasVindas">Olá!</h2>
+            <p>Acompanhe, cadastre e gerencie eventos climáticos registrados no sistema.</p>
+        </section>
+
+        <section class="resumo">
+            <div class="cartao">
+                <span>🌧️</span>
+                <p>Eventos registrados</p>
+                <h3 id="totalEventos">0</h3>
+            </div>
+
+            <div class="cartao">
+                <span>📍</span>
+                <p>Cidades monitoradas</p>
+                <h3 id="totalCidades">0</h3>
+            </div>
+
+            <div class="cartao">
+                <span>🌡️</span>
+                <p>Temperatura máxima</p>
+                <h3 id="maiorTemperatura">--</h3>
+            </div>
+        </section>
+
+        <section class="conteudo">
+            <div class="painel">
+                <h2 id="tituloFormulario">Cadastrar evento</h2>
+
+                <form id="formEvento">
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" maxlength="50" placeholder="Ex.: Campinas" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="tipoEvento">Tipo de evento</label>
+                        <select id="tipoEvento" required>
+                            <option value="">Selecione o evento</option>
+                            <option value="Chuva intensa">Chuva intensa</option>
+                            <option value="Tempestade">Tempestade</option>
+                            <option value="Onda de calor">Onda de calor</option>
+                            <option value="Frio intenso">Frio intenso</option>
+                            <option value="Seca">Seca</option>
+                            <option value="Vendaval">Vendaval</option>
+                            <option value="Granizo">Granizo</option>
+                            <option value="Enchente">Enchente</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="temperaturaMaxima">Temperatura máxima (°C)</label>
+                        <input type="number" id="temperaturaMaxima" step="0.1" placeholder="Ex.: 32.5">
+                    </div>
+
+                    <div class="campo">
+                        <label for="nivelImpacto">Nível de impacto</label>
+                        <select id="nivelImpacto" required>
+                            <option value="">Selecione o impacto</option>
+                            <option value="Baixo">Baixo</option>
+                            <option value="Moderado">Moderado</option>
+                            <option value="Alto">Alto</option>
+                            <option value="Muito alto">Muito alto</option>
+                        </select>
+                    </div>
+
+                    <button class="btn" type="submit" id="btnSalvar">Cadastrar evento</button>
+                    <button class="btn btn-sair" type="button" id="btnCancelar" hidden>Cancelar edição</button>
+
+                    <p class="mensagem" id="mensagemEvento" role="status"></p>
+                </form>
+            </div>
+
+            <div class="painel">
+                <h2>Eventos climáticos</h2>
+                <button class="btn btn-atualizar" id="btnAtualizar" type="button">Atualizar lista</button>
+
+                <div class="lista" id="listaEventos">
+                    <p class="vazio">Carregando eventos...</p>
+                </div>
+
+                <p class="mensagem" id="mensagemLista" role="status"></p>
+            </div>
+        </section>
+
+        <footer class="rodape">
+            Weather-Events · Sistema de gerenciamento de eventos climáticos
+        </footer>
+    </main>
+</body>
+</html>
